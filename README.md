@@ -11,3 +11,6 @@ This is a web application that will allow users to have access to a library of v
 ![alt text](/ProjectFiles/SavedRoutinePage.jpg)
 ![alt text](/ProjectFiles/CreateRoutine.jpg)
 ![alt text](/ProjectFiles/CreateRoutineRepsSets.jpg)
+
+## Entity Relationship Diagram
+![alt text](/Project/ERD2.jpg)
