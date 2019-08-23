@@ -6,3 +6,5 @@ This is a web application that will allow users to have access to a library of v
 
 ## Wire Frame
 ![alt text](/ProjectFiles/FrontPage.jpg)
+![alt text](/ProjectFiles/MuscleGroupsPage.jpg)
+![alt text](/ProjectFiles/FrontPage.jpg)
