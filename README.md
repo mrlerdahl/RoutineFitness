@@ -9,5 +9,5 @@ This is a web application that will allow users to have access to a library of v
 ![alt text](/ProjectFiles/MuscleGroupsPage.jpg)
 ![alt text](/ProjectFiles/SearchRoutinePage.jpg)
 ![alt text](/ProjectFiles/SavedRoutinePage.jpg)
-![alt text](/ProjectFiles/CreateRoutinePage.jpg)
+![alt text](/ProjectFiles/CreateRoutine.jpg.jpg)
 ![alt text](/ProjectFiles/CreateRoutineRepsSets.jpg)
