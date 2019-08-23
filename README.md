@@ -13,4 +13,7 @@ This is a web application that will allow users to have access to a library of v
 ![alt text](/ProjectFiles/CreateRoutineRepsSets.jpg)
 
 ## Entity Relationship Diagram
-![alt text](/Project/ERD2.jpg)
+![alt text](/ProjectFiles/ERD2.jpg)
+
+## UML Diagram
+![alt text](/ProjectFiles/UML.jpg)
