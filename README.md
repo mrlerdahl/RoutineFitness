@@ -17,3 +17,6 @@ This is a web application that will allow users to have access to a library of v
 
 ## UML Diagram
 ![alt text](/ProjectFiles/UML.jpg)
+
+## Testing and RTM
+![alt text](/ProjectFiles/TestsRTM.JPG)
