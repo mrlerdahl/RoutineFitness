@@ -6,11 +6,11 @@ This is a web application that will allow users to have access to a library of v
 
 ## Wire Frame
 ![alt text](/ProjectFiles/WireFrame/FrontPage.jpg)
-![alt text](/ProjectFiles/MuscleGroupsPage.jpg)
-![alt text](/ProjectFiles/SearchRoutinePage.jpg)
-![alt text](/ProjectFiles/SavedRoutinePage.jpg)
-![alt text](/ProjectFiles/CreateRoutine.jpg)
-![alt text](/ProjectFiles/CreateRoutineRepsSets.jpg)
+![alt text](/ProjectFiles/WireFrame/MuscleGroupsPage.jpg)
+![alt text](/ProjectFiles/WireFrame/SearchRoutinePage.jpg)
+![alt text](/ProjectFiles/WireFrame/SavedRoutinePage.jpg)
+![alt text](/ProjectFiles/WireFrame/CreateRoutine.jpg)
+![alt text](/ProjectFiles/WireFrame/CreateRoutineRepsSets.jpg)
 
 ## Entity Relationship Diagram
 ![alt text](/ProjectFiles/ERD2.jpg)
