@@ -24,3 +24,4 @@ This is a web application that will allow users to have access to a library of v
 
 ## Prototype
 http://routinefitness.atwebpages.com
+This will look pretty enlarged for a website, the designed is meant to look good on a mobile device.
