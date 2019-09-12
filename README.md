@@ -27,6 +27,7 @@ Users will be able to set the sets, reps, weight(will be added), and a text box 
 
 ## Entity Relationship Diagram
 ![alt text](/ProjectFiles/ERD2.jpg)
+As mentioned in the description there will no longer be a user profile or a journal, this feature will be added once the main concept is completed.
 
 ## UML Diagram
 ![alt text](/ProjectFiles/UML.jpg)
