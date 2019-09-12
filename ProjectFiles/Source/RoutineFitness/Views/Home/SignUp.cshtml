@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+    <meta charset='UTF-8' />
+    <title>Sign Up</title>
+    <link rel='stylesheet' href='~/css/styles.css' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start of header -->
+    <div class="header-container">
+        <div class="header">
+            <h1>Routine Fitness</h1>
+        </div>
+    </div>
+    <!-- End of header -->
+    <!-- Start of form -->
+        <div class="login-form">
+            <form asp-action="MuscleGroups">
+                Username:<br>
+                <input type="text" name="Username"><br>
+                Password:<br>
+                <input type="password" name="Password"><br>
+                Verify Password:<br>
+                <input type="password" name="VPassword"><br>
+                E-mail:<br>
+                <input type="email" name="Email"><br>
+                Verify E-mail:<br>
+                <input type="email" name="VEmail"><br><br>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+        <!-- End of form -->
+</body>
+</html>
