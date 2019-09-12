@@ -7,7 +7,7 @@ This is a web application that will allow users to have access to a library of v
 ## Table of Contents
 1. [Wire Frame](#Wire-Frame)
 2. [Entity Relationship Diagra](#Entity-Relationship-Diagram)
-3. [Database] (#Database)
+3. [Database](#Database)
 4. [UML Diagram](#UML-Diagram)
 5. [Testing and RTM](#Testing-and-RTM)
 6. [Prototype](#Prototype)
