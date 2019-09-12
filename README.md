@@ -13,11 +13,17 @@ This is a web application that will allow users to have access to a library of v
 
 ## Wire Frame
 ![alt text](/ProjectFiles/WireFrame/FrontPage.jpg)
+What users will first see when the come to the webpage. Users have the option to continue without and account in order to see what the app is like before creating an account.
 ![alt text](/ProjectFiles/WireFrame/MuscleGroupsPage.jpg)
+Here users will have the option to choose a specific muscles group to see what workouts will target those areas. Each exercise will have a video showing how the exercise is done and a description along with it.
 ![alt text](/ProjectFiles/WireFrame/SearchRoutinePage.jpg)
+Once users start creating routines and sharing the routines they have created other users will then be able to use the search function. Users can type in specific words that will match with other words within titles and the results will appear in the result box. If a blank search is done, then all routines will load.
 ![alt text](/ProjectFiles/WireFrame/SavedRoutinePage.jpg)
+In this section is where the user will be able to find and view the routines they have created and the ones they have saved when searching for routines made by other users.
 ![alt text](/ProjectFiles/WireFrame/CreateRoutine.jpg)
+This page will look a lot like the muscle groups page, but on the right hand side there will be an area where each work out gets created. Also when the users views the work it there will be a button to add that workout to a custome routine
 ![alt text](/ProjectFiles/WireFrame/CreateRoutineRepsSets.jpg)
+Users will be able to set the sets, reps, weight(will be added), and a text box to add any notes for their workout
 
 ## Entity Relationship Diagram
 ![alt text](/ProjectFiles/ERD2.jpg)
