@@ -28,96 +28,63 @@ Users will be able to set the sets, reps, weight(will be added), and a text box 
 
 ## Database
 <pre><code>
--------------------------------------<br>
--- Script that creates a the database RoutineFitness<br>
---This database will be used to store user accounts, workout for the users to choose from<br>
---and saves the routines that are created and shared<br>
--------------------------------------<br>
---This Database will be used for my class project for creating a webapplication that allows<br>
---users to create, save, and share weight lifting routines<br>
--------------------------------------<br>
+-------------------------------------
+-- Script that creates the RoutineFitness database
+-- This database will be used to store user accounts, create and search workouts
+-------------------------------------
 
 DROP Database IF EXISTS RoutineFitness;
 CREATE Database RoutineFitness;
 
 USE RoutineFitness;
---Creates a table of user accounts
-DROP TABLE IF EXISTS Users;
-CREATE TABLE Users
+-------------------------------------- Create Users Table --------------------------------------
+DROP TABLE IF EXISTS Accounts;
+CREATE TABLE Accounts
 (
 	userid    INT           NOT NULL IDENTITY,
 	username  NVARCHAR(25)  NOT NULL,
 	password  NVARCHAR(40)  NOT NULL,
 	firstname NVARCHAR(25)  NULL,
 	lastname  NVARCHAR(30)  NULL,
-	CONSTRAINT PK_Users PRIMARY KEY(userid) 
+	CONSTRAINT PK_Accounts PRIMARY KEY(userid) 
 );
--- I need to add a savedRoutine column, but I want it to hold a file of saved routines
 
-
--- Creates a table that holds all the different lifts
-DROP TABLE IF EXISTS MuscleGroups;
-CREATE TABLE MuscleGroups
+-------------------------------------- Create Lifts Table --------------------------------------
+DROP TABLE IF EXISTS Lifts;
+CREATE TABLE Lifts
 (
-	musclegroupid INT          NOT NULL IDENTITY,
-	legs          NVARCHAR(20) NULL,
-	calves        NVARCHAR(20) NULL,
-	abdominals    NVARCHAR(20) NULL,
-	chest         NVARCHAR(20) NULL,
-	triceps       NVARCHAR(20) NULL,
-	biceps        NVARCHAR(20) NULL,
-	back          NVARCHAR(20) NULL,
-	shoulders     NVARCHAr(20) NULL,
-	allmuscles    NVARCHAR(20) NULL,
-	CONSTRAINT PK_MuscleGroups PRIMARY KEY(musclegroupid)
+	liftid			 INT				NOT NULL IDENTITY,
+	category        NVARCHAR(20)	NOT NULL,
+	liftname        NVARCHAR(40)	NOT NULL,
+	videourl			 NVARCHAR(100) NOT NULL,
+	liftdescription NVARCHAR(20)	NOT NULL,			  
+	CONSTRAINT PK_Lifts PRIMARY KEY(liftid)
 );
 
--- Creates a table of Routines
-DROP TABLE IF EXISTS Routines;
-CREATE TABLE Routines
+-------------------------------------- Create Activity Table --------------------------------------
+DROP TABLE IF EXISTS Activity;
+CREATE TABLE Activity
 (
-	routineid INT          NOT NULL IDENTITY,
-	userid    INT          NOT NULL,
-	shared    NVARCHAR(50) NULL,
-	created   NVARCHAR(50) NULL,
-	CONSTRAINT PK_Routines PRIMARY KEY(routineid),
-	CONSTRAINT FK_Routines_Users FOREIGN KEY(userid)
-		REFERENCES Users(userid)
+	 activityid int NOT NULL IDENTITY,
+	 liftid int NOT NULL,
+	 sets int NOT NULL,
+	 reps int NOT NULL,
+	 weight int NULL
+	 CONSTRAINT PK_activityid PRIMARY KEY(activityid),
+	 FOREIGN KEY(liftid) REFERENCES Lifts(liftid)
 );
 
--- Populates the Users table
-SET IDENTITY_INSERT users ON;
-INSERT INTO Users (userid, username, password, firstname, lastname)
-	VALUES
-		(1, 'mrlerdahl', 'password1', 'Mitchell', 'Lerdahl'),
-		(2, 'Taco', 'password2', 'Tony', 'Lark'),
-		(3, 'BuffDude', 'password3', 'Bob', 'Stiller'),
-		(4, 'BuffChick', 'password4', 'Sandy', 'Beach'),
-		(5, 'GirlLifter', 'password5', 'Holly', 'Wood')
-SET IDENTITY_INSERT users OFF;
-
--- Populates the Muscle Groups table
-SET IDENTITY_INSERT musclegroups ON;
-INSERT INTO MuscleGroups (musclegroupid, legs, calves, abdominals, chest, triceps, biceps, back, shoulders, allmuscles)
-	VALUES
-		(1, 'Back Squat', 'Standing Calf Raises', 'Cable Crunch', 'Bench Press', 'Tricep Extension', 'Hammer Curls', 'Bent Over Rows', 'Shoulder DB Press', NULL),
-		(2, 'Back Squat', 'Standing Calf Raises', 'Cable Crunch', 'Bench Press', 'Tricep Extension', 'Hammer Curls', 'Bent Over Rows', 'Shoulder DB Press', NUll),
-		(3, 'Back Squat', 'Standing Calf Raises', 'Cable Crunch', 'Bench Press', 'Tricep Extension', 'Hammer Curls', 'Bent Over Rows', 'Shoulder DB Press', NULL),
-		(4, 'Back Squat', 'Standing Calf Raises', 'Cable Crunch', 'Bench Press', 'Tricep Extension', 'Hammer Curls', 'Bent Over Rows', 'Shoulder DB Press', NULL),
-		(5, 'Back Squat', 'Standing Calf Raises', 'Cable Crunch', 'Bench Press', 'Tricep Extension', 'Hammer Curls', 'Bent Over Rows', 'Shoulder DB Press', NULL)
-SET IDENTITY_INSERT musclegroups OFF;
-
-
--- Populates the Routines table
-SET IDENTITY_INSERT Routines ON;
-INSERT INTO Routines (routineid, userid, shared, created)
-	VALUES
-		(1, 1, 'My First Routine', 'My First Routine'),
-		(2, 2, 'Create Taco Bump Arms', 'Create Taco Bump Arms'),
-		(3, 4, 'Beach Bod', 'Beach Bod'),
-		(4, 1, NULL , 'My Second Routine'),
-		(5, 3, 'Bobby Boulder Shoulders', 'Bobby Boulder Shoulders')
-SET IDENTITY_INSERT Routines OFF;
+-------------------------------------- Create Workouts Table --------------------------------------
+DROP TABLE IF EXISTS Workouts;
+CREATE TABLE Workouts
+(
+	 userid		 INT			  NOT NULL,
+	 workoutid	 INT			  NOT NULL,
+	 workoutname NVARCHAR(60) NOT NULL,
+	 activityid	 INT			  NOT NULL,
+	 FOREIGN KEY(userid) REFERENCES Accounts(userid),
+	 FOREIGN KEY(activityid) REFERENCES Activity(activityid)
+);
 </code></pre>
 
 ## Entity Relationship Diagram
