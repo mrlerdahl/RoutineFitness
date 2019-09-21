@@ -24,7 +24,7 @@ using RoutineFitness.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2dc08217a8d6fbfc8ef3626b4d8e21d20bd1b7d5", @"/Views/Home/Muscle.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3492bd12daee1145ec9a0ff7ac7724895aa43e2a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0bd32df9be29470d170083354a107495ea9ae796", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Muscle : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", new global::Microsoft.AspNetCore.Html.HtmlString("~/css/styles.css"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -66,12 +66,12 @@ using RoutineFitness.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html lang=\'en\'>\r\n");
             EndContext();
             BeginContext(68, 225, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "507df01f1d3748cd96412e78ebcad87c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed6ee53a1eea4d09a4dc02bff4fc7ef2", async() => {
                 BeginContext(74, 61, true);
                 WriteLiteral("\r\n    <meta charset=\'UTF-8\' />\r\n    <title>Legs</title>\r\n    ");
                 EndContext();
                 BeginContext(135, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "88fdeca73c9544ada1af6327cda12a48", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "47b40e9342034bf6b0a8b7ac217620ab", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -105,7 +105,7 @@ using RoutineFitness.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(295, 3761, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a00629cfbb4c49478b723056400f803e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05c6e204408f4898a24c7ffe77aaf508", async() => {
                 BeginContext(301, 3748, true);
                 WriteLiteral(@"
     <!-- Start of header -->

@@ -24,7 +24,7 @@ using RoutineFitness.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ba9c05a6c2b46917c6688761db2ad21f2806ef71", @"/Views/Home/SignUp.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3492bd12daee1145ec9a0ff7ac7724895aa43e2a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0bd32df9be29470d170083354a107495ea9ae796", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_SignUp : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.SingleQuotes);
@@ -69,12 +69,12 @@ using RoutineFitness.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html lang=\'en\'>\r\n");
             EndContext();
             BeginContext(68, 228, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e354e68dc15d4e7ba50c9f7696c06ef4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef878d35354d4764addc5ba9101a3e4d", async() => {
                 BeginContext(74, 64, true);
                 WriteLiteral("\r\n    <meta charset=\'UTF-8\' />\r\n    <title>Sign Up</title>\r\n    ");
                 EndContext();
                 BeginContext(138, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3281e92821264447bfa063f0f07b381e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6783d11552524466ab214f547c6700ec", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -108,7 +108,7 @@ using RoutineFitness.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(298, 903, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eda3d67922274d91a85ba9d4766d8eb1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79b03c23d6b14dfa9a5c2833fdc773d7", async() => {
                 BeginContext(304, 266, true);
                 WriteLiteral(@"
     <!-- Start of header -->
@@ -123,7 +123,7 @@ using RoutineFitness.Models;
             ");
                 EndContext();
                 BeginContext(570, 576, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec58e2d840014965be2100747bdc4db9", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe85898ec75c47c9af898dce627996f7", async() => {
                     BeginContext(602, 537, true);
                     WriteLiteral(@"
                 Username:<br>
