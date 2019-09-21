@@ -87,6 +87,9 @@ CREATE TABLE Workouts
 );
 </code></pre>
 
+### Database Diagram
+![alt text](/ProjectFiles/RTDatabaseDiagram.JPG)
+
 ## Entity Relationship Diagram
 ![alt text](/ProjectFiles/ERD2.jpg)
 As mentioned in the description there will no longer be a user profile or a journal, this feature will be added once the main concept is completed.
