@@ -53,10 +53,10 @@ CREATE TABLE Accounts
 DROP TABLE IF EXISTS Lifts;
 CREATE TABLE Lifts
 (
-	liftid			 INT				NOT NULL IDENTITY,
+	liftid		INT		NOT NULL IDENTITY,
 	category        NVARCHAR(20)	NOT NULL,
 	liftname        NVARCHAR(40)	NOT NULL,
-	videourl			 NVARCHAR(100) NOT NULL,
+	videourl	NVARCHAR(100)   NOT NULL,
 	liftdescription NVARCHAR(20)	NOT NULL,			  
 	CONSTRAINT PK_Lifts PRIMARY KEY(liftid)
 );
@@ -80,7 +80,7 @@ CREATE TABLE Workouts
 (
 	 userid		 INT			  NOT NULL,
 	 workoutid	 INT			  NOT NULL,
-	 workoutname NVARCHAR(60) NOT NULL,
+	 workoutname     NVARCHAR(60)             NOT NULL,
 	 activityid	 INT			  NOT NULL,
 	 FOREIGN KEY(userid) REFERENCES Accounts(userid),
 	 FOREIGN KEY(activityid) REFERENCES Activity(activityid)
@@ -90,9 +90,9 @@ CREATE TABLE Workouts
 ### Database Diagram
 ![alt text](/ProjectFiles/RTDatabaseDiagram.JPG)
 
-## Entity Relationship Diagram
+## Preliminary Entity Relationship Diagram
 ![alt text](/ProjectFiles/ERD2.jpg)
-As mentioned in the description there will no longer be a user profile or a journal, this feature will be added once the main concept is completed.
+As mentioned in the description there will no longer be a user profile page nor a journal page, this feature will be added once the main concept is completed.
 
 ## UML Diagram
 ![alt text](/ProjectFiles/UML.jpg)
@@ -103,4 +103,4 @@ As mentioned in the description there will no longer be a user profile or a jour
 
 ## Prototype
 http://routinefitness.atwebpages.com <br>
-This will look enlarged for a website, the designed is meant to look good on a mobile device.
+This is an HTML CSS prototype and will look enlarged for a website, the designed is meant to look good on a mobile device.
