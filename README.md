@@ -9,7 +9,7 @@ This is a web application that will allow users to have access to a library of v
 2. [Entity Relationship Diagram](#Entity-Relationship-Diagram)
 3. [Database](#Database)
 4. [UML Diagram](#UML-Diagram)
-5. [Testing and RTM](#Testing-and-RTM)
+5. [Requirements](#Requirements)
 6. [Prototype](#Prototype)
 
 ## Wire Frame
