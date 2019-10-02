@@ -98,44 +98,44 @@ As mentioned in the description there will no longer be a user profile page nor 
 ![alt text](/ProjectFiles/UML.jpg)
 
 ## Requirements
-1. Create Account
-	1.1 user shall enter a username
-  		1.1.1 field shall be less than 40 characters
-		1.1.2 field shall be filled
-1.2 user shall enter a password
-	1.2.1 field shall have a minimum of 8 characters
-	1.2.2 field shall be no longer than 50 characters
-	1.2.3 field shall be filled
-1.3 user shall enter an email
-	1.3.1 field shall have normal email format
-	1.3.2 field shall be filled
-1.4 user shall provide a first name
-	1.4.1 field shall be less than 30 characters
-1.5 user shall provide a last name
-	1.5.1 field shall be less than 30 characters
-2. Customize workouts
-	2.1 User shall select a lift
-	2.2 User shall enter number of sets
-		2.2.1 field shall only accept numbers
-		2.2.1 field shall be filled
-	2.3 User shall enter number of reps
-		2.3.1 field shall only accept numbers
-		2.3.2 field shall be filled
-	2.4 User shall enter amount of weight
-		2.4.1 field shall only accept numbers
-		2.4.2 field shall be filled
-	2.5 User shall click an add button
-		2.5.1 Lift shall be added to a list
-	2.6 User shall save workout
-		2.6.1 workout shall be added to the database
-	2.7 User shall edit workouts
-		2.7.1 fields shall be changed
-		2.7.2 fields shall be saved
-	2.8 User shall delete workouts
-		2.8.1 workout shall be removed from list
-3 View saved workouts
-	3.1 User shall view workouts
-		3.1.1 workouts shall display to the screen
+1. Create Account <br>
+	1.1 user shall enter a username <br>
+  		1.1.1 field shall be less than 40 characters <br>
+		1.1.2 field shall be filled <br>
+1.2 user shall enter a password <br>
+	1.2.1 field shall have a minimum of 8 characters <br>
+	1.2.2 field shall be no longer than 50 characters <br>
+	1.2.3 field shall be filled <br>
+1.3 user shall enter an email <br>
+	1.3.1 field shall have normal email format <br>
+	1.3.2 field shall be filled <br>
+1.4 user shall provide a first name <br>
+	1.4.1 field shall be less than 30 characters <br>
+1.5 user shall provide a last name <br>
+	1.5.1 field shall be less than 30 characters <br>
+2. Customize workouts <br>
+	2.1 User shall select a lift <br>
+	2.2 User shall enter number of sets <br>
+		2.2.1 field shall only accept numbers <br>
+		2.2.1 field shall be filled <br>
+	2.3 User shall enter number of reps <br>
+		2.3.1 field shall only accept numbers <br>
+		2.3.2 field shall be filled <br>
+	2.4 User shall enter amount of weight <br>
+		2.4.1 field shall only accept numbers <br>
+		2.4.2 field shall be filled <br>
+	2.5 User shall click an add button <br>
+		2.5.1 Lift shall be added to a list <br>
+	2.6 User shall save workout <br>
+		2.6.1 workout shall be added to the database <br>
+	2.7 User shall edit workouts <br>
+		2.7.1 fields shall be changed <br>
+		2.7.2 fields shall be saved <br>
+	2.8 User shall delete workouts <br>
+		2.8.1 workout shall be removed from list <br>
+3. View saved workouts <br>
+	3.1 User shall view workouts <br>
+		3.1.1 workouts shall display to the screen <br>
 
 
 
