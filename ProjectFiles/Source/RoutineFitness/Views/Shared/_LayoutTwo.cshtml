@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='~/css/styles.css' />
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    @*<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />*@
     <title>Routine Fitness</title>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.display = "none";
+        }
+    </script>
 </head>
 <body>
 
@@ -17,17 +27,21 @@
         </div>
     </div>
     <!-- End of header -->
-
     <!-- Start in Navigation -->
     <div class="navigation-container">
         <div class="navigation">
-            <a id="navigation-active" asp-action="MuscleGroups">Muscle Groups</a>
+            <a id="navigation-active" asp-action="Muscle">Muscle Groups</a>
             <a asp-action="SearchRoutines">Search Routines</a>
-            <a asp-action="SavedRoutines">Saved Routines</a>
+            <a asp-controller="SavedWorkout" asp-action="SavedWorkout">Saved Routines</a>
             <a asp-action="CreateRoutines">Create Routine</a>
         </div>
     </div>
+    <div style="text-align:center"> @await Component.InvokeAsync("NavigationMenu")</div>
     <!-- End of Navigation -->
-    @RenderBody()
+    <div>
+        @RenderBody()
+    </div>
+        
 </body>
 </html>
+

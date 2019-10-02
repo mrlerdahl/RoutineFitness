@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Activity>
+
+@{
+    Layout = "_LayoutTwo";
+}
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Lift Name</th>
+                <th>Sets</th>
+                <th>Reps</th>
+                <th>Weight</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var a in Model)
+            {
+                <tr>
+                    <td></td>
+                    <td>@a.Sets</td>
+                    <td>@a.Reps</td>
+                    <td>@a.Weight</td>
+                    <td>@a.Note</td>
+                </tr>
+            }
+        </tbody>
+    </table>

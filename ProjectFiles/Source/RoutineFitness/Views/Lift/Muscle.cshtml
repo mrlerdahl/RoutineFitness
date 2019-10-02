@@ -1,0 +1,24 @@
+﻿@model LiftsViewModel
+@{
+    Layout = "_LayoutTwo";
+}
+
+<!-- Start of content -->
+<div class="content-container">
+    <div class="content-grid">
+        @foreach (var l in Model.Lifts)
+        {
+
+            <div class="content-item legs">
+                <figure>
+                    <a asp-controller="Lift" asp-action="LiftDetail" asp-route-name="@l.LiftName">
+                        <img src="@l.ImageUrl" />
+                        <figcaption>@l.LiftName</figcaption>
+                    </a>
+                </figure>
+            </div>
+
+        }
+    </div>
+</div>
+<!-- End of content -->

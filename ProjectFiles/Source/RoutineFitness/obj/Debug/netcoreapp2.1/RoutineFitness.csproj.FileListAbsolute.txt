@@ -34,6 +34,9 @@ C:\Users\turtl\OneDrive\Cloud Developer Class\Project\RoutineFitness\RoutineFitn
 C:\Users\turtl\OneDrive\Cloud Developer Class\Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.dll
 C:\Users\turtl\OneDrive\Cloud Developer Class\Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.pdb
 C:\Users\turtl\OneDrive\Cloud Developer Class\Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.csproj.CopyComplete
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\RoutineFitness.deps.json
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\RoutineFitness.runtimeconfig.json
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\RoutineFitness.runtimeconfig.dev.json
@@ -41,7 +44,7 @@ C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineF
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\RoutineFitness.pdb
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\RoutineFitness.Views.dll
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\bin\Debug\netcoreapp2.1\RoutineFitness.Views.pdb
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.csproj.CoreCompileInputs.cache
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.csprojAssemblyReference.cache
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.RazorAssemblyInfo.cache
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.RazorAssemblyInfo.cs
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.AssemblyInfoInputs.cache
@@ -49,23 +52,23 @@ C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineF
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.TagHelpers.input.cache
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.TagHelpers.output.cache
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.RazorCoreGenerate.cache
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\CreateRoutines.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\LogIn.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\Muscle.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\MuscleGroups.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\SavedRoutines.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\SearchRoutines.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\SignUp.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\CreateRoutines.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\LogIn.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\MuscleGroups.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\SavedRoutines.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\SearchRoutines.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\SignUp.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\View.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Lift\LiftDetail.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Lift\Muscle.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LayoutTwo.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.RazorTargetAssemblyInfo.cache
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.RazorTargetAssemblyInfo.cs
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.Views.pdb
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.dll
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.pdb
 C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.csproj.CopyComplete
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\RoutineFitness.csprojAssemblyReference.cache
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Home\View.g.cshtml.cs
-C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LayoutTwo.g.cshtml.cs

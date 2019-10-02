@@ -10,20 +10,14 @@ namespace RoutineFitness.Models
     public class Workout
     {
         [Key]
-        public int Id { get; set; }
-
         public int WorkoutId { get; set; }
-
-        [ForeignKey("Activity")]
-        public int ActivityId { get; set; }
 
         [ForeignKey("User")]
         public int UserId { get; set; }
+        public virtual Account User { get; set; }
 
         public string WorkoutName { get; set; }
 
-        public virtual ICollection<Activity> Activity { get; set; }
-
-        public virtual Account User { get; set; }
+        public ICollection<Activity> Activities { get; set; }
     }
 }

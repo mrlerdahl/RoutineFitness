@@ -8,15 +8,8 @@ namespace RoutineFitness.Models
 {
     public class LiftsViewModel
     {
-        [Key]
-        public int LiftId { get; set; }
+        public IEnumerable<Lift> Lifts { get; set; }
 
-        public string Category { get; set; }
-
-        public string LiftName { get; set; }
-
-        public string VideoUrl { get; set; }
-
-        public string LiftDescription { get; set; }
+        public string CurrentLiftName { get; set; }
     }
 }

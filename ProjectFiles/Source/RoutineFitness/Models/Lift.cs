@@ -18,6 +18,11 @@ namespace RoutineFitness.Models
 
         public string VideoUrl { get; set; }
 
+        public string ImageUrl { get; set; }
+
         public string LiftDescription { get; set; }
+
+        public ICollection<Activity> Activities { get; set; }
+
     }
 }

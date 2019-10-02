@@ -19,10 +19,17 @@ namespace RoutineFitness.Models
         [StringLength(40)]
         public string Password { get; set; }
 
+        [Required(ErrorMessage = "Email required")]
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
+        public string Email { get; set; }
+
         [StringLength(30)]
         public string FirstName { get; set; }
 
         [StringLength(30)]
         public string LastName { get; set; }
+
+        public ICollection<Workout> Workouts { get; set; }
     }
 }

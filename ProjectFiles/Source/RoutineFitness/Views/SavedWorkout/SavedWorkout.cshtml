@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Workout>
+
+@{
+    Layout = "_LayoutTwo";
+}
+
+@foreach (var w in Model)
+{
+    <div><a asp-action="ShowList" asp-controller="Activity" asp-route-listActivities="@w.WorkoutId">@w.WorkoutName</a> </div>
+}

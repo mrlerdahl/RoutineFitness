@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using RoutineFitness.Models;
 
+
 namespace RoutineFitness
 {
     public class Startup
@@ -26,11 +27,17 @@ namespace RoutineFitness
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<RoutineFitnessContext>(options => options.UseSqlServer(Configuration["Data:RoutineFitnessConstr:ConnectionString"]));
+
+            services.AddTransient<IAccountRepository, EFAccountRepository>();
+            services.AddTransient<IActivityReposityory, EFActivityRepository>();
+            services.AddTransient<ILiftRepository, EFLiftRepository>();
+            services.AddTransient<IWorkoutRepository, EFWorkoutRepository>();
             services.AddMvc();
 
-            var ConnectionString = Configuration.GetConnectionString("RoutineFitnessConstr");
-            services.AddDbContext<RoutineContext>
-                (options => options.UseSqlServer(ConnectionString));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,12 +57,25 @@ namespace RoutineFitness
             app.UseStaticFiles();
             //app.UseCookiePolicy();
             app.UseMvcWithDefaultRoute();
+
             app.UseMvc(routes =>
             {
+
+                routes.MapRoute(
+                    name: null,
+                    template: "{category}",
+                    defaults: new { controller = "Lift", action = "Muscle" });
+
+                routes.MapRoute(
+                    name: null,
+                    template: "",
+                    defaults: new { controller = "Lift", action = "Muscle" });
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            SeedData.EnsurePopulated(app);
         }
     }
 }

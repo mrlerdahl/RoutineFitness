@@ -12,7 +12,14 @@ namespace RoutineFitness.Models
         [Key]
         public int ActivityId { get; set; }
 
-        
+        [ForeignKey("Workout")]
+        public int WorkoutId { get; set; }
+        public virtual Workout Workout { get; set; }
+
+        [ForeignKey("Lift")]
+        public int LiftId { get; set; }
+        public virtual Lift Lift { get; set; }
+
         [Required(ErrorMessage = "Number of sets required")]
         public int Sets { get; set; }
 
@@ -22,10 +29,7 @@ namespace RoutineFitness.Models
         [Required(ErrorMessage = "Amount of weight reuired, 0 for no weight")]
         public int Weight { get; set; }
 
-        [ForeignKey("Lift")]
-        public int LiftId { get; set; }
-
-        public virtual ICollection<Lift> Lift { get; set; }
+        public string Note { get; set; }
 
     }
 }
