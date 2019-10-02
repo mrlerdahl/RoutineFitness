@@ -97,8 +97,46 @@ As mentioned in the description there will no longer be a user profile page nor 
 ## UML Diagram
 ![alt text](/ProjectFiles/UML.jpg)
 
-## Testing and RTM
-![alt text](/ProjectFiles/TestsRTM.JPG)
+## Requirements
+1. Create Account
+	1.1 user shall enter a username
+  		1.1.1 field shall be less than 40 characters
+		1.1.2 field shall be filled
+1.2 user shall enter a password
+	1.2.1 field shall have a minimum of 8 characters
+	1.2.2 field shall be no longer than 50 characters
+	1.2.3 field shall be filled
+1.3 user shall enter an email
+	1.3.1 field shall have normal email format
+	1.3.2 field shall be filled
+1.4 user shall provide a first name
+	1.4.1 field shall be less than 30 characters
+1.5 user shall provide a last name
+	1.5.1 field shall be less than 30 characters
+2. Customize workouts
+	2.1 User shall select a lift
+	2.2 User shall enter number of sets
+		2.2.1 field shall only accept numbers
+		2.2.1 field shall be filled
+	2.3 User shall enter number of reps
+		2.3.1 field shall only accept numbers
+		2.3.2 field shall be filled
+	2.4 User shall enter amount of weight
+		2.4.1 field shall only accept numbers
+		2.4.2 field shall be filled
+	2.5 User shall click an add button
+		2.5.1 Lift shall be added to a list
+	2.6 User shall save workout
+		2.6.1 workout shall be added to the database
+	2.7 User shall edit workouts
+		2.7.1 fields shall be changed
+		2.7.2 fields shall be saved
+	2.8 User shall delete workouts
+		2.8.1 workout shall be removed from list
+3 View saved workouts
+	3.1 User shall view workouts
+		3.1.1 workouts shall display to the screen
+
 
 
 ## Prototype
