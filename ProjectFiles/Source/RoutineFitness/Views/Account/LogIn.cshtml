@@ -1,0 +1,25 @@
+﻿@model UserLoginModel
+
+@{
+    Layout = "_Layout";
+}
+
+    <!-- Start of form -->
+    <div class="login-form">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <form asp-action="Login" method="post">
+            <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+            <div>
+                <label asp-for="UserName"></label><br />
+                <input asp-for="UserName">
+            </div>
+            <div>
+                <label asp-for="Password"></label><br />
+                <input asp-for="Password">
+            </div>
+
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+    <!-- End of form -->
+

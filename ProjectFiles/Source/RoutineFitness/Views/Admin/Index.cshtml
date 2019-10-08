@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Lift>
+
+@{
+    Layout = "_LayoutTwo";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Lift Name</th>
+            <th>Category</th>
+            <th>Video Url</th>
+            <th>Image Url</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var l in Model)
+        {
+        <tr>
+            <td>@l.LiftName</td>
+            <td>@l.Category</td>
+            <td>@l.VideoUrl</td>
+            <td>@l.ImageUrl</td>
+            <td>@l.LiftDescription</td>
+            <td>
+                <form asp-action="Delete" method="post">
+                    <a asp-action="Edit" asp-route-liftId="@l.LiftId">Edit</a>
+                    <input type="hidden" name="LiftId" value="@l.LiftId" />
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Create">Add Lift</a>
+</div>

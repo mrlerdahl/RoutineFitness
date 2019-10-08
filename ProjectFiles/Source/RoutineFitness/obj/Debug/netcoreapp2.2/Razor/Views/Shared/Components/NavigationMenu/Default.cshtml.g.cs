@@ -28,8 +28,13 @@ using RoutineFitness.Models.ViewModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"88072c99120782325a9f321d8dd81fe13db4eede", @"/Views/Shared/Components/NavigationMenu/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9e58fe342f906a6ca2ef134bbf2ce5a0614ffbe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cdfdb7f6bf7d563e3fc3287ac9d96171df2fccad", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_NavigationMenu_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<string>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Muscle", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -62,7 +67,7 @@ using RoutineFitness.Models.ViewModels;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(34, 580, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88072c99120782325a9f321d8dd81fe13db4eede4743", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88072c99120782325a9f321d8dd81fe13db4eede4936", async() => {
                 BeginContext(40, 567, true);
                 WriteLiteral(@"
         <style>
@@ -128,7 +133,7 @@ using RoutineFitness.Models.ViewModels;
         ");
             EndContext();
             BeginContext(884, 75, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88072c99120782325a9f321d8dd81fe13db4eede6773", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88072c99120782325a9f321d8dd81fe13db4eede6966", async() => {
                 BeginContext(951, 4, true);
                 WriteLiteral("Home");
                 EndContext();
@@ -167,7 +172,7 @@ using RoutineFitness.Models.ViewModels;
             WriteLiteral("            ");
             EndContext();
             BeginContext(1029, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88072c99120782325a9f321d8dd81fe13db4eede9222", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88072c99120782325a9f321d8dd81fe13db4eede9415", async() => {
                 BeginContext(1106, 8, false);
 #line 52 "C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\Views\Shared\Components\NavigationMenu\Default.cshtml"
                                                                                    Write(category);

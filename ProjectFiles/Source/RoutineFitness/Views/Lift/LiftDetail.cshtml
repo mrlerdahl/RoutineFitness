@@ -5,15 +5,19 @@
     Layout = "~/Views/Shared/_LayoutTwo.cshtml";
 }
 
-<h2>LiftDetail</h2>
-@foreach (var l in Model.Lifts)
-{
-    <video width="320" height="240" controls>
-        <source src="@l.VideoUrl" type="video/mp4">
-    </video>
 
-    <p>@l.LiftName</p>
-    <p>@l.LiftDescription</p>
-}
+    <div style="text-align: center">
+        <h2>LiftDetail</h2>
+        @foreach (var l in Model.Lifts)
+        {
+            <video width="300" height="350" controls>
+                <source src="@l.VideoUrl" type="video/mp4">
+            </video>
+
+            <p>@l.LiftName</p>
+            <p>@l.LiftDescription</p>
+        }
+    </div>
+
 
 

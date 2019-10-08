@@ -37,7 +37,7 @@ namespace RoutineFitness.Migrations
                         .IsRequired()
                         .HasMaxLength(40);
 
-                    b.Property<string>("Username")
+                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(30);
 

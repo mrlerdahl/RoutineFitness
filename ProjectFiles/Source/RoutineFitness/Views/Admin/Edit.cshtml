@@ -1,0 +1,36 @@
+﻿@model Lift
+
+@{
+    Layout = "_LayoutTwo";
+}
+
+    <form asp-action="Edit" enctype="multipart/form-data" method="post">
+        <input type="hidden" asp-for="LiftId" />
+        <div>
+            <label asp-for="LiftName"></label>
+            <div><span asp-validation-for="LiftName"></span></div>
+            <input asp-for="LiftName" />
+        </div>
+        <div>
+            <label asp-for="Category"></label>
+            <div><span asp-validation-for="Category"></span></div>
+            <input asp-for="Category" />
+        </div>
+        <div>
+            <label asp-for="LiftDescription"></label>
+            <div><span asp-validation-for="LiftDescription"></span></div>
+            <input asp-for="LiftDescription" />
+        </div>
+        <div>
+            <label asp-for="VideoUrl"></label>
+            <input type="file" name="files" accept="video/*">
+        </div>
+        <div>
+            <label asp-for="ImageUrl"></label>
+            <input type="file" id="file" name="file" accept="image/*">
+        </div>
+        <div>
+            <button type="submit">Save</button>
+            <a asp-action="Index">Cancel</a>
+        </div>
+    </form>

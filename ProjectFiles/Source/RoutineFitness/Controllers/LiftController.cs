@@ -11,9 +11,9 @@ namespace RoutineFitness.Controllers
 {
     public class LiftController : Controller
     {
-        private ILiftRepository repository;
+        private IRoutineFitnessRepository repository;
 
-        public LiftController(ILiftRepository repo)
+        public LiftController(IRoutineFitnessRepository repo)
         {
             repository = repo;
         }
@@ -22,12 +22,14 @@ namespace RoutineFitness.Controllers
 
         public ViewResult Muscle(string category)
         {
+            // Filters lifts based on what the category the user clicks on
             return View(new LiftsViewModel { Lifts = repository.Lifts
                                                         .Where(p => category == null || p.Category == category) });
         }
 
         public ViewResult LiftDetail(string name)
         {
+            // Displays the lift detials when a user clicks on a specific lift
             return View(new LiftsViewModel { Lifts = repository.Lifts
                                                         .Where(p => p.LiftName == name)});
         }

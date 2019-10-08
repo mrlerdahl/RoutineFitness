@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using RoutineFitness.Models;
+using Microsoft.AspNetCore.Identity;
+
 
 
 namespace RoutineFitness
@@ -29,11 +31,13 @@ namespace RoutineFitness
         {
 
             services.AddDbContext<RoutineFitnessContext>(options => options.UseSqlServer(Configuration["Data:RoutineFitnessConstr:ConnectionString"]));
+            services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:RoutineFitnessIdentity:ConnectionString"]));
 
-            services.AddTransient<IAccountRepository, EFAccountRepository>();
-            services.AddTransient<IActivityReposityory, EFActivityRepository>();
-            services.AddTransient<ILiftRepository, EFLiftRepository>();
-            services.AddTransient<IWorkoutRepository, EFWorkoutRepository>();
+            services.AddIdentity<IdentityUser, IdentityRole>(opts => { opts.User.RequireUniqueEmail = true; })
+                .AddEntityFrameworkStores<AppIdentityDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddTransient<IRoutineFitnessRepository, EFRoutineFitnessRepository>();
             services.AddMvc();
 
 
@@ -56,6 +60,7 @@ namespace RoutineFitness
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //app.UseCookiePolicy();
+            app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
 
             app.UseMvc(routes =>
@@ -76,6 +81,7 @@ namespace RoutineFitness
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

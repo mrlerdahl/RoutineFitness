@@ -28,8 +28,13 @@ using RoutineFitness.Models.ViewModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f2ac0b635abb7f0c53a71619947d277942ac792d", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9e58fe342f906a6ca2ef134bbf2ce5a0614ffbe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cdfdb7f6bf7d563e3fc3287ac9d96171df2fccad", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.SingleQuotes);
@@ -62,12 +67,12 @@ using RoutineFitness.Models.ViewModels;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html lang=\'en\'>\r\n");
             EndContext();
             BeginContext(37, 376, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2ac0b635abb7f0c53a71619947d277942ac792d4548", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2ac0b635abb7f0c53a71619947d277942ac792d4741", async() => {
                 BeginContext(43, 95, true);
                 WriteLiteral("\r\n    <meta charset=\'UTF-8\' />\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    ");
                 EndContext();
                 BeginContext(138, 49, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f2ac0b635abb7f0c53a71619947d277942ac792d5032", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f2ac0b635abb7f0c53a71619947d277942ac792d5225", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -104,7 +109,7 @@ using RoutineFitness.Models.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(415, 224, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2ac0b635abb7f0c53a71619947d277942ac792d7418", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f2ac0b635abb7f0c53a71619947d277942ac792d7611", async() => {
                 BeginContext(421, 196, true);
                 WriteLiteral("\r\n    <!-- Start of header -->\r\n    <div class=\"header-container\">\r\n        <div class=\"header\">\r\n            <h1>Routine Fitness</h1>\r\n        </div>\r\n    </div>\r\n    <!-- End of header -->\r\n    ");
                 EndContext();

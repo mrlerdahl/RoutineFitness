@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject SignInManager<IdentityUser> signInManager;
+
+<!DOCTYPE html>
 
 <html lang='en'>
 <head>
@@ -27,11 +29,24 @@
         </div>
     </div>
     <!-- End of header -->
+    @if (signInManager.IsSignedIn(User))
+    {
+        <form method="post" asp-action="Logout" asp-controller="Account">
+            <button type="submit">Logout @User.Identity.Name</button>
+        </form>
+    }
+    else
+    {
+        <a asp-controller="Account" asp-action="Login">LogIn</a>
+        <a asp-controller="CreateAccount" asp-action="Create">Register</a>
+    }
+    <!-- Menu needs Logout/login, Account settings, View Saved workouts, Search workouts, register 
+         Muscle Groups and Create Routine can be toggle buttons-->
     <!-- Start in Navigation -->
     <div class="navigation-container">
         <div class="navigation">
-            <a id="navigation-active" asp-action="Muscle">Muscle Groups</a>
-            <a asp-action="SearchRoutines">Search Routines</a>
+            <a asp-controller="Lift" asp-action="Muscle">Muscle Groups</a>
+            <a asp-controller="SavedWorkout" asp-action="Search">Search Routines</a>
             <a asp-controller="SavedWorkout" asp-action="SavedWorkout">Saved Routines</a>
             <a asp-action="CreateRoutines">Create Routine</a>
         </div>
@@ -41,7 +56,7 @@
     <div>
         @RenderBody()
     </div>
-        
+
 </body>
 </html>
 

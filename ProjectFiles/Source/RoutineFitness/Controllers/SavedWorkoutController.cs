@@ -10,21 +10,23 @@ namespace RoutineFitness.Controllers
 {
     public class SavedWorkoutController : Controller
     {
-        private IWorkoutRepository workoutRepository;
-        //private IActivityReposityory activityReposityory;
+        private IRoutineFitnessRepository workoutRepository;
 
-        public SavedWorkoutController (IWorkoutRepository workoutRepo/*, IActivityReposityory activityRepo*/)
+        public SavedWorkoutController (IRoutineFitnessRepository workoutRepo)
         {
             workoutRepository = workoutRepo;
-            //activityReposityory = activityRepo;
         }
 
         public ViewResult SavedWorkout()
         {
+            return View(workoutRepository.Workouts);
+        }
+
+
+        public ViewResult Search(string searchInput)
+        {
             return View(workoutRepository.Workouts
-                            
-                                    .Distinct()
-            );
+                        .Where(s  => s.WorkoutName.Contains(searchInput)));
         }
 
     }

@@ -28,8 +28,13 @@ using RoutineFitness.Models.ViewModels;
 
 #line default
 #line hidden
+#line 4 "C:\Users\turtl\OneDrive\Cloud Developer Class\7. Project\RoutineFitness\RoutineFitness\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"202887c701001a909e3884f1c988b7d659e43ddb", @"/Views/Lift/Muscle.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9e58fe342f906a6ca2ef134bbf2ce5a0614ffbe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cdfdb7f6bf7d563e3fc3287ac9d96171df2fccad", @"/Views/_ViewImports.cshtml")]
     public class Views_Lift_Muscle : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<LiftsViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Lift", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -76,7 +81,7 @@ using RoutineFitness.Models.ViewModels;
             WriteLiteral("            <div class=\"content-item legs\">\r\n                <figure>\r\n                    ");
             EndContext();
             BeginContext(297, 217, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "202887c701001a909e3884f1c988b7d659e43ddb4787", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "202887c701001a909e3884f1c988b7d659e43ddb4980", async() => {
                 BeginContext(375, 30, true);
                 WriteLiteral("\r\n                        <img");
                 EndContext();

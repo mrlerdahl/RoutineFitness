@@ -1,0 +1,32 @@
+﻿@model CreateUserModel
+
+@{
+    Layout = "_Layout";
+}
+
+    <!-- Start of form -->
+
+    <div class="login-form">
+        <div asp-validation-summary=" All" style="color: red"></div>
+        <form asp-action="Create" method="post">
+            <div>
+                <label asp-for="UserName"></label><br />
+                <input asp-for="UserName" />
+            </div>
+            <div>
+                <label asp-for="Password"></label><br />
+                <input type="password" asp-for="Password" />
+                @*Verify Password:<br>
+            <input type="password" name="VPassword"><br>*@
+            </div>
+            <div>
+                <label asp-for="Email"></label><br />
+                <input asp-for="Email" />
+                @*Verify E-mail:<br>
+            <input type="email" name="VEmail"><br><br>*@
+            </div>
+            <button type="submit">Create Account</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+        <!-- End of form -->

@@ -10,9 +10,9 @@ namespace RoutineFitness.Views.Shared.Component
 {
     public class NavigationMenuViewComponent : ViewComponent
     {
-        private ILiftRepository repository;
+        private IRoutineFitnessRepository repository;
 
-        public NavigationMenuViewComponent(ILiftRepository repo)
+        public NavigationMenuViewComponent(IRoutineFitnessRepository repo)
         {
             repository = repo;
         }

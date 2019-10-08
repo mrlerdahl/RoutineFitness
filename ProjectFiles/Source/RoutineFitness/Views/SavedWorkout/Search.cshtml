@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Workout>
+
+@{
+    Layout = "_LayoutTwo";
+}
+
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<!-- Search form -->
+<form class="form-inline " asp-action="Search">
+    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" name="searchInput"
+           aria-label="Search">
+    <i class="fas fa-search" aria-hidden="true"></i>
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+
+@foreach (var w in Model)
+{
+    <div><a asp-action="ShowList" asp-controller="Activity" asp-route-listActivities="@w.WorkoutId">@w.WorkoutName</a> </div>
+}
+
