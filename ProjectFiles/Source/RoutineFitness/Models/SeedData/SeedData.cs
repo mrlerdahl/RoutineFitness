@@ -208,9 +208,9 @@ namespace RoutineFitness.Models
             if (!context.Workouts.Any())
             {
                 context.AddRange(
-                   new Workout { UserId = 1, WorkoutName = "Leg Day"},
-                   new Workout { UserId = 3, WorkoutName = "My Workout" },
-                   new Workout { UserId = 2, WorkoutName = "Killer Workout" }
+                   new Workout { WorkoutId = 1, UserId = 1, WorkoutName = "Leg Day"},
+                   new Workout { WorkoutId = 2, UserId = 3, WorkoutName = "My Workout" },
+                   new Workout { WorkoutId = 3, UserId = 2, WorkoutName = "Killer Workout" }
                    );
             }
 

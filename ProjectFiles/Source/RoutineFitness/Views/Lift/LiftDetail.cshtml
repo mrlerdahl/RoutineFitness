@@ -16,7 +16,9 @@
 
             <p>@l.LiftName</p>
             <p>@l.LiftDescription</p>
+            <a asp-action="AddToList" asp-controller="CustomWorkout" class="btn btn-primary" asp-route-liftName="@l.LiftName" asp-route-liftId="@l.LiftId">Add Lift</a>
         }
+
     </div>
 
 

@@ -79,13 +79,16 @@ namespace RoutineFitness.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Category");
+                    b.Property<string>("Category")
+                        .IsRequired();
 
                     b.Property<string>("ImageUrl");
 
-                    b.Property<string>("LiftDescription");
+                    b.Property<string>("LiftDescription")
+                        .IsRequired();
 
-                    b.Property<string>("LiftName");
+                    b.Property<string>("LiftName")
+                        .IsRequired();
 
                     b.Property<string>("VideoUrl");
 
@@ -96,15 +99,17 @@ namespace RoutineFitness.Migrations
 
             modelBuilder.Entity("RoutineFitness.Models.Workout", b =>
                 {
-                    b.Property<int>("WorkoutId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("UserId");
 
+                    b.Property<int>("WorkoutId");
+
                     b.Property<string>("WorkoutName");
 
-                    b.HasKey("WorkoutId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 

@@ -10,6 +10,7 @@ namespace RoutineFitness.Models
     public class Workout
     {
         [Key]
+        public int Id { get; set; }
         public int WorkoutId { get; set; }
 
         [ForeignKey("User")]

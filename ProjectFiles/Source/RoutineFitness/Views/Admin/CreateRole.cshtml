@@ -1,0 +1,14 @@
+﻿@model CreateRoleViewModel
+
+@{
+    Layout = "_LayoutTwo";
+}
+
+<form method="post">
+    <div asp-validation-summary="All" ></div>
+    <div>
+        <label asp-for="RoleName"></label>
+        <input asp-for="RoleName" />
+        <button type="submit">Create Role</button>
+    </div>
+</form>

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,14 +30,19 @@ namespace RoutineFitness
         {
 
             services.AddDbContext<RoutineFitnessContext>(options => options.UseSqlServer(Configuration["Data:RoutineFitnessConstr:ConnectionString"]));
+            //Data:RoutineFitnessConstr:ConnectionString
+            //RoutineFitnessDB
             services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:RoutineFitnessIdentity:ConnectionString"]));
-
+            //Data:RoutineFitnessIdentity:ConnectionString
+            //IdentityDB
             services.AddIdentity<IdentityUser, IdentityRole>(opts => { opts.User.RequireUniqueEmail = true; })
                 .AddEntityFrameworkStores<AppIdentityDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddTransient<IRoutineFitnessRepository, EFRoutineFitnessRepository>();
             services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
 
 
 
@@ -60,9 +64,10 @@ namespace RoutineFitness
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             //app.UseCookiePolicy();
+            app.UseSession();
             app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
-
+            
             app.UseMvc(routes =>
             {
 
@@ -80,8 +85,8 @@ namespace RoutineFitness
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            SeedData.EnsurePopulated(app);
-            IdentitySeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
+            //IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

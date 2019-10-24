@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='~/css/styles.css' />
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    @*<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />*@
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <title>Routine Fitness</title>
     <script>
         function openNav() {
@@ -48,7 +48,7 @@
             <a asp-controller="Lift" asp-action="Muscle">Muscle Groups</a>
             <a asp-controller="SavedWorkout" asp-action="Search">Search Routines</a>
             <a asp-controller="SavedWorkout" asp-action="SavedWorkout">Saved Routines</a>
-            <a asp-action="CreateRoutines">Create Routine</a>
+            <a asp-action="Index" asp-controller="CreateRoutine">Create Routine</a>
         </div>
     </div>
     <div style="text-align:center"> @await Component.InvokeAsync("NavigationMenu")</div>

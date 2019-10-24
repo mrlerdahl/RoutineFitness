@@ -1,0 +1,19 @@
+﻿@model CustomWorkoutViewModel
+
+@{
+    ViewData["Title"] = "LiftDetail";
+    Layout = "~/Views/Shared/_LayoutTwo.cshtml";
+}
+
+<h2>Custom Workout</h2>
+@foreach (var a in Model.CustomWorkout.Line)
+{
+    <div>@a.LiftName</div>
+    <div>@a.Activity.Sets</div>
+    <div>@a.Activity.Reps</div>
+    <div>@a.Activity.Weight</div>
+    <div>@a.Activity.Note</div>
+    <div>@a.Activity.WorkoutId</div>
+}
+
+<a class="btn btn-primary" href="@Model.ReturnUrl">Continue</a>

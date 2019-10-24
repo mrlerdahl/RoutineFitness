@@ -14,6 +14,7 @@ namespace RoutineFitness.Models
             context = ctx;
         }
 
+
         public IQueryable<Account> Accounts => context.Accounts;
         public IQueryable<Activity> Activities => context.Activities;
         public IQueryable<Lift> Lifts => context.Lifts;
