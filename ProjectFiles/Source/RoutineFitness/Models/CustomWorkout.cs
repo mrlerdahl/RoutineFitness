@@ -7,7 +7,7 @@ namespace RoutineFitness.Models
 {
     public class CustomWorkout
     {
-        private List<ActivityLine> lineCollection = new List<ActivityLine>();
+        public List<ActivityLine> lineCollection = new List<ActivityLine>();
 
         public int WorkoutId { get; set; }
         public virtual void AddActivity(Activity activity, string liftName)
@@ -26,7 +26,7 @@ namespace RoutineFitness.Models
 
         public virtual void Clear() => lineCollection.Clear();
 
-        public virtual IEnumerable<ActivityLine> Line => lineCollection;
+        //public virtual IEnumerable<ActivityLine> Line => lineCollection;
     }
 
     public class ActivityLine

@@ -16,28 +16,50 @@ namespace RoutineFitness.Controllers
     {
         private IRoutineFitnessRepository repository;
         private readonly UserManager<IdentityUser> userManager;
+        private CustomWorkout custom;
 
-        public CustomWorkoutController(IRoutineFitnessRepository repo, UserManager<IdentityUser> userManager)
+        public CustomWorkoutController(IRoutineFitnessRepository repo, UserManager<IdentityUser> userManager, CustomWorkout customWorkout)
         {
             repository = repo;
             this.userManager = userManager;
+            custom = customWorkout;
         }
 
         public ViewResult Index(string returnUrl)
         {
             return View(new CustomWorkoutViewModel
             {
-                CustomWorkout = GetCustomWorkout(),
+                CustomWorkout = custom,
                 ReturnUrl = returnUrl
             });
         }
 
         [HttpPost]
-        public IActionResult CreateWorkout(string workoutName, string userId)
+        public IActionResult CreateWorkout(string workoutName, int workoutId)
         {
-            return View();
+            string userNumber = userManager.GetUserId(User);
+            
+
+            if(userNumber == null)
+            {
+               return RedirectToAction("Create", "CreateAccount");
+            }
+
+            repository.SaveWorkout(workoutName, userNumber, workoutId);
+
+            foreach (var item in custom.lineCollection)
+            {
+                repository.SaveActivity(item.Activity);
+            }
+
+            
+
+            custom.Clear();
+
+            return RedirectToAction("SavedWorkout", "SavedWorkout");
         }
 
+        // This will take you to the page with a form asking for information and from there is passed into the ShowList method below
         public IActionResult AddToList(string liftName, int liftId)
         {
             ViewBag.LiftName = liftName;
@@ -46,9 +68,11 @@ namespace RoutineFitness.Controllers
             return View();
         }
 
+        // Once execute it is then actually added to the temporary list of activities
+        // This works just like a shopping cart
         public RedirectToActionResult ShowList(int sets, int reps, int weight, string note, int liftId, string liftName, int workoutId, string returnUrl)
         {
-            CustomWorkout customWorkout = GetCustomWorkout();
+            CustomWorkout customWorkout = custom;
 
             if (customWorkout.WorkoutId == 0)
             {
@@ -70,30 +94,23 @@ namespace RoutineFitness.Controllers
             };
            
             customWorkout.AddActivity(activity, liftName);
-            SaveCustomWorkout(customWorkout);
 
             return RedirectToAction("Index", new { returnUrl });
         }
 
         public RedirectToActionResult RemoveActivity(int liftId, string returnUrl)
         {
-            CustomWorkout customWorkout = GetCustomWorkout();
+            CustomWorkout customWorkout = custom;
             customWorkout.RemoveActivity(liftId);
-            SaveCustomWorkout(customWorkout);
+            //SaveCustomWorkout(customWorkout);
 
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        private CustomWorkout GetCustomWorkout()
-        {
-            CustomWorkout customeWorkout = HttpContext.Session.GetJson<CustomWorkout>("CustomWorkout") ?? new CustomWorkout();
-            return customeWorkout;
-        }
-
-        private void SaveCustomWorkout(CustomWorkout customWorkout)
-        {
-            HttpContext.Session.SetJson("CustomWorkout", customWorkout);
-        }
+        //private void SaveCustomWorkout(CustomWorkout customWorkout)
+        //{
+        //    HttpContext.Session.SetJson("CustomWorkout", customWorkout);
+        //}
 
     }
 }

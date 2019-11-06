@@ -40,6 +40,8 @@ namespace RoutineFitness
                 .AddDefaultTokenProviders();
 
             services.AddTransient<IRoutineFitnessRepository, EFRoutineFitnessRepository>();
+            services.AddScoped<CustomWorkout>(sp => SessionCustomWorkout.GetCustomWorkout(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();

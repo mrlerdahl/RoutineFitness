@@ -7,8 +7,10 @@
     <meta charset='UTF-8' />
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='~/css/styles.css' />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <title>Routine Fitness</title>
     <script>
         function openNav() {
@@ -23,40 +25,58 @@
 <body>
 
     <!-- Start of header -->
-    <div class="header-container">
-        <div class="header">
-            <h1>Routine Fitness</h1>
-        </div>
+    <div class="display-2 text-center bg-orange d-none d-lg-block pt-2 pb-2" style="border-bottom: solid black 1px; font-family: 'Montserrat', sans-serif;">
+        ROUTINE FITNESS
     </div>
-    <!-- End of header -->
-    @if (signInManager.IsSignedIn(User))
-    {
-        <form method="post" asp-action="Logout" asp-controller="Account">
-            <button type="submit">Logout @User.Identity.Name</button>
-        </form>
-    }
-    else
-    {
-        <a asp-controller="Account" asp-action="Login">LogIn</a>
-        <a asp-controller="CreateAccount" asp-action="Create">Register</a>
-    }
-    <!-- Menu needs Logout/login, Account settings, View Saved workouts, Search workouts, register 
-         Muscle Groups and Create Routine can be toggle buttons-->
-    <!-- Start in Navigation -->
-    <div class="navigation-container">
-        <div class="navigation">
-            <a asp-controller="Lift" asp-action="Muscle">Muscle Groups</a>
-            <a asp-controller="SavedWorkout" asp-action="Search">Search Routines</a>
-            <a asp-controller="SavedWorkout" asp-action="SavedWorkout">Saved Routines</a>
-            <a asp-action="Index" asp-controller="CreateRoutine">Create Routine</a>
-        </div>
-    </div>
-    <div style="text-align:center"> @await Component.InvokeAsync("NavigationMenu")</div>
-    <!-- End of Navigation -->
-    <div>
-        @RenderBody()
+    <div class="display-6 text-center bg-orange d-lg-none border-bottom-1 pt-2 pb-2" style="border-bottom: solid black 1px; font-family: 'Montserrat', sans-serif;">
+        ROUTINE FITNESS
     </div>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <span class="bg-dark border rounded pl-3"><a class="navbar-brand" href="#">@await Component.InvokeAsync("NavigationMenu")</a></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-light bg-dark" id="navbarNavDropdown">
+            <ul class="navbar-nav bg-dark">
+
+                <li class="nav-item bg-dark">
+                    <a class="nav-link text-light" asp-controller="SavedWorkout" asp-action="NavSearch">Search Routines</a>
+                </li>
+                <li class="nav-item bg-dark">
+                    <a class="nav-link text-light" asp-controller="SavedWorkout" asp-action="SavedWorkout">Saved Routines</a>
+                </li>
+                <li class="nav-item bg-dark">
+                    @await Component.InvokeAsync("CustomWorkout")
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        
+        <span>
+            <div class="text-right">
+                @if (signInManager.IsSignedIn(User))
+            {
+                <form method="post" asp-action="Logout" asp-controller="Account">
+                    <button type="submit">Logout @User.Identity.Name</button>
+                </form>
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="Login">LogIn |</a>
+                <a asp-controller="CreateAccount" asp-action="Create">Register</a>
+            }
+            </div>
+        </span>
+
+       
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+    </div>
 </body>
 </html>
 

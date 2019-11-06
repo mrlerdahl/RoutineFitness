@@ -17,7 +17,7 @@ namespace RoutineFitness.Models
 
         }
 
-        public DbSet<Account> Accounts { get; set; }
+        //public DbSet<Account> Accounts { get; set; }
         public DbSet<Lift> Lifts { get; set; }
         public DbSet<Activity> Activities { get; set; }
         public DbSet<Workout> Workouts { get; set; }

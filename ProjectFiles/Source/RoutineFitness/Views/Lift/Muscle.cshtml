@@ -4,21 +4,37 @@
 }
 
 <!-- Start of content -->
-<div class="content-container">
-    <div class="content-grid">
+    <div class="d-none d-md-block">
         @foreach (var l in Model.Lifts)
         {
-
-            <div class="content-item legs">
-                <figure>
+        <span class="d-inline-block">
+            <div style="width:220px; height: 220px">
+                <figure class="figure">
                     <a asp-controller="Lift" asp-action="LiftDetail" asp-route-name="@l.LiftName">
-                        <img src="@l.ImageUrl" />
-                        <figcaption>@l.LiftName</figcaption>
+                        <img class="figure-img border border-dark"  style="height:170px; width:170px" src="@l.ImageUrl" />
+                        <figcaption class="figure-caption">@l.LiftName</figcaption>
                     </a>
                 </figure>
             </div>
+        </span>
+            
 
         }
     </div>
-</div>
+
+    <div class="d-md-none">
+        @foreach (var l in Model.Lifts)
+        {
+            <span class="d-flex flex-column my-2">
+                
+                        <a asp-controller="Lift" asp-action="LiftDetail" asp-route-name="@l.LiftName">
+                            <img class="border-dark" style="height:100px; width:70px" src="@l.ImageUrl" />
+                            <span class="m-2">@l.LiftName</span>
+                        </a>
+
+            </span>
+
+
+        }
+    </div>
 <!-- End of content -->

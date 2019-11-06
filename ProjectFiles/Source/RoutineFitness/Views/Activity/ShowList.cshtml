@@ -4,29 +4,39 @@
     Layout = "_LayoutTwo";
 }
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Lift Name</th>
-                    <th>Sets</th>
-                    <th>Reps</th>
-                    <th>Weight</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
+    <table class="table">
+
+
+        @foreach (var a in Model.Activities.Zip(Model.LiftName, Tuple.Create))
+        {
             <tbody>
-
-                @foreach (var a in Model.Activities.Zip(Model.LiftName, Tuple.Create))
-                {
-                    <tr>
-                        <td>@a.Item2</td>
-                        <td>@a.Item1.Sets</td>
-                        <td>@a.Item1.Reps</td>
-                        <td>@a.Item1.Weight</td>
-                        <td>@a.Item1.Note</td>
-                    </tr>
-                }
-
-
+                <tr>
+                    <th>Name</th>
+                    <td>@a.Item2</td>
+                </tr>
+                <tr>
+                    <th>Sets</th>
+                    <td>@a.Item1.Sets</td>
+                </tr>
+                <tr>
+                    <th>Reps</th>
+                    <td>@a.Item1.Reps</td>
+                </tr>
+                <tr>
+                    <th>Weight</th>
+                    <td>@a.Item1.Weight</td>
+                </tr>
+                <tr>
+                    <th>Note</th>
+                    <td>@a.Item1.Note</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
             </tbody>
+        }
+
+
+            
         </table>

@@ -15,7 +15,7 @@ namespace RoutineFitness.Models
         }
 
 
-        public IQueryable<Account> Accounts => context.Accounts;
+        //public IQueryable<Account> Accounts => context.Accounts;
         public IQueryable<Activity> Activities => context.Activities;
         public IQueryable<Lift> Lifts => context.Lifts;
         public IQueryable<Workout> Workouts => context.Workouts;
@@ -50,6 +50,42 @@ namespace RoutineFitness.Models
                 context.SaveChanges();
             }
             return dbEntry;
+        }
+
+        public void SaveActivity(Activity activity)
+        {
+            //if(activity.ActivityId == 0)
+            //{
+                context.Activities.Add(activity);
+            //}
+            //else
+            //{
+            //    Activity dbEntry = context.Activities
+            //                            .FirstOrDefault(a => a.ActivityId == activity.ActivityId);
+            //    if(dbEntry != null)
+            //    {
+            //        dbEntry.LiftId = activity.LiftId;
+            //        dbEntry.WorkoutId = activity.WorkoutId;
+            //        dbEntry.Sets = activity.Sets;
+            //        dbEntry.Reps = activity.Reps;
+            //        dbEntry.Weight = activity.Weight;
+            //        dbEntry.Note = activity.Note;
+            //    }
+            //}
+            context.SaveChanges();
+        }
+
+        public void SaveWorkout(string workoutName, string userId, int workoutId)
+        {
+            context.Workouts.Add( new Workout
+            {
+                WorkoutId = workoutId,
+                WorkoutName = workoutName,
+                UserNumber = userId,
+                UserId = 1
+            });
+            context.SaveChanges();
+            
         }
 
     }

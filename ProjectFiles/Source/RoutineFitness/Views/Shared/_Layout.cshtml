@@ -5,17 +5,20 @@
     <meta charset='UTF-8' />
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='~/css/styles.css' />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    @*<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />*@
+    <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <title>Routine Fitness</title>
 </head>
 <body>
     <!-- Start of header -->
-    <div class="header-container">
-        <div class="header">
-            <h1>Routine Fitness</h1>
-        </div>
+    @*<div class="header-container">
+        <div class="header">*@
+    <div class="display-2 text-center bg-orange d-none d-lg-block pt-2 pb-2" style="border-bottom: solid black 1px; font-family: 'Montserrat', sans-serif;">
+        ROUTINE FITNESS
     </div>
+    <div class="display-6 text-center bg-orange d-lg-none border-bottom-1 pt-2 pb-2" style="border-bottom: solid black 1px; font-family: 'Montserrat', sans-serif;">
+        ROUTINE FITNESS
+    </div>
+
     <!-- End of header -->
     @RenderBody()
 </body>

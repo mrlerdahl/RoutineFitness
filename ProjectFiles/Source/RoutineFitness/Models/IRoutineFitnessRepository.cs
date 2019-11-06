@@ -7,7 +7,7 @@ namespace RoutineFitness.Models
 {
     public interface IRoutineFitnessRepository
     {
-        IQueryable<Account> Accounts { get; }
+        //IQueryable<Account> Accounts { get; }
         IQueryable<Activity> Activities { get; }
         IQueryable<Lift> Lifts { get; }
         IQueryable<Workout> Workouts { get; }
@@ -15,5 +15,9 @@ namespace RoutineFitness.Models
         void SaveLift(Lift lift);
 
         Lift DeleteLift(int liftId);
+
+        void SaveActivity(Activity activity);
+
+        void SaveWorkout(string workoutName, string userId, int workoutId);
     }
 }

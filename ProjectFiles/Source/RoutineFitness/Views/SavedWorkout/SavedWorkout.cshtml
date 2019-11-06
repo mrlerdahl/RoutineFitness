@@ -4,7 +4,14 @@
     Layout = "_LayoutTwo";
 }
 
-@foreach (var w in Model)
+@if (Model != null)
 {
-    <div><a asp-action="ShowList" asp-controller="Activity" asp-route-listActivities="@w.WorkoutId">@w.WorkoutName</a> </div>
+    <div class="text-center m-auto" style="width: 50%; height: 50%">
+        <ul class="list-group list-group-flush">
+            @foreach (var w in Model)
+            {
+                <li class="list-group-item" style="background-color: transparent"><a asp-action="ShowList" asp-controller="Activity" asp-route-listActivities="@w.WorkoutId">@w.WorkoutName</a></li>
+            }
+        </ul>
+    </div>
 }

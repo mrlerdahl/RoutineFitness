@@ -1,0 +1,7 @@
+﻿@model CustomWorkout
+
+<head>
+    <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+    <a class="nav-link text-light" asp-action="Index" asp-controller="CustomWorkout" asp-route-returnUrl="@ViewContext.HttpContext.Request.PathAndQuery()">Create Routine</a>

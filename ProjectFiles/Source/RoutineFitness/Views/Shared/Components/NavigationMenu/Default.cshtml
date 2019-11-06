@@ -1,48 +1,50 @@
-﻿@model IEnumerable<string>
+﻿
+
+@model IEnumerable<string>
 
     <head>
+        <link href="~/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
         <style>
 
 
-.sidenav {
-  display: none;
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 60px;
-}
+            .sidenav {
+                display: none;
+                height: 100%;
+                width: 250px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                padding-top: 60px;
+            }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  background-color: #111;
-  color: #818181;
-  display: block;
-}
+                .sidenav a {
+                    padding: 8px 8px 8px 32px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    background-color: #111;
+                    color: #818181;
+                    display: block;
+                }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+                    .sidenav a:hover {
+                        color: #f1f1f1;
+                    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
+                .sidenav .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                }
         </style>
     </head>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">
-    &#9776; Muscle Groups</span>
+<span style="font-size:20px;cursor:pointer" class="bg-dark" onclick="openNav()">
+     Muscle Groups</span>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="text-align:center">&times;</a>

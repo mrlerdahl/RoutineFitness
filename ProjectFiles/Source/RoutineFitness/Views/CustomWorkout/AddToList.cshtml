@@ -5,21 +5,30 @@
     Layout = "~/Views/Shared/_LayoutTwo.cshtml";
 }
 
-<form asp-action="ShowList" asp-controller="CustomWorkout" method="post">
-    <div style="text-align: center">
-        <input type="hidden" name="liftName" value="@ViewBag.LiftName" />
-        <input type="hidden" name="liftId" value="@ViewBag.LiftId" />
-        <input type="hidden" name="workoutId" value="@ViewBag.WorkoutId" />
-        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
-        <label>Sets</label>
-        <input type="text" name="sets" value="" /><br />
-        <label>Reps</label>
-        <input type="text" name="reps" value="" /><br />
-        <label>Weight</label>
-        <input type="text" name="weight" value="" /><br />
-        <label>Notes</label>
-        <input type="text" name="note" value="" /><br />
-        <button class="btn btn-primary" type="submit">Add Lift</button>
+    <div class="d-flex justify-content-center">
+        <form asp-action="ShowList" asp-controller="CustomWorkout" method="post">
+            <div style="text-align: center; ">
+                <input type="hidden" name="liftName" value="@ViewBag.LiftName" />
+                <input type="hidden" name="liftId" value="@ViewBag.LiftId" />
+                <input type="hidden" name="workoutId" value="@ViewBag.WorkoutId" />
+                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                <div class="form-group">
+                    <label>Sets</label>
+                    <input class="form-control" type="text" name="sets" value="" />
+                </div>
+                <div class="form-group">
+                    <label>Reps</label>
+                    <input class="form-control" type="text" name="reps" value="" />
+                </div>
+                <div class="form-group">
+                    <label>Weight</label>
+                    <input class="form-control" type="text" name="weight" value="" />
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea class="form-control" type="text" name="note" value="" rows="3"></textarea>
+                </div>            
+                <button class="btn btn-primary" type="submit">Add Lift</button>
+            </div>
+        </form>
     </div>
-    
-</form>

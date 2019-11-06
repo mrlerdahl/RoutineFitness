@@ -4,16 +4,87 @@
     ViewData["Title"] = "LiftDetail";
     Layout = "~/Views/Shared/_LayoutTwo.cshtml";
 }
-
 <h2>Custom Workout</h2>
-@foreach (var a in Model.CustomWorkout.Line)
+
+<table class="table">
+    @foreach (var a in Model.CustomWorkout.lineCollection)
+    {
+
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>@a.LiftName</td>
+            </tr>
+            <tr>
+                <th>Sets</th>
+                <td>@a.Activity.Sets</td>
+            </tr>
+            <tr>
+                <th>Reps</th>
+                <td>@a.Activity.Reps</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>@a.Activity.Weight</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td class="text-wrap">@a.Activity.Note</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>@a.Activity.WorkoutId</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <form asp-action="RemoveActivity" method="post">
+                        <input type="hidden" name="liftId" value="@a.Activity.LiftId" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+
+    }
+</table>
+<a class="btn btn-primary" asp-action="Muscle" asp-controller="Lift">Continue</a>
+
+
+
+@if (Model.CustomWorkout.lineCollection.Count == 0)
 {
-    <div>@a.LiftName</div>
-    <div>@a.Activity.Sets</div>
-    <div>@a.Activity.Reps</div>
-    <div>@a.Activity.Weight</div>
-    <div>@a.Activity.Note</div>
-    <div>@a.Activity.WorkoutId</div>
+
+}
+else
+{
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">Submit Routine</button>
+
+    <div style="background-color: transparent" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div style="background-color: transparent" class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Enter Workout Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="CreateWorkout" method="post">
+                        <input class="form-control" type="text" name="workoutName" value="" />
+                        <input type="hidden" name="workoutId" value="@Model.CustomWorkout.WorkoutId" />
+                        <button type="submit" class="btn btn-primary m-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 }
 
-<a class="btn btn-primary" href="@Model.ReturnUrl">Continue</a>
+

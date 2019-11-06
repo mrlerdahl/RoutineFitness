@@ -2,11 +2,13 @@
     Layout = "_Layout";
 }
     <!-- Start of index buttons -->
-    <div class="index-buttons-container">
-        <div class="index-buttons">
-            <a asp-controller="Account" asp-action="Login">Log In</a><br>
-            <a asp-controller="CreateAccount" asp-action="Create">Sign up</a><br>
-            <a asp-controller="Lift" asp-action="Muscle">Skip</a><br>
-        </div>
-    </div>
+    @*<div class="index-buttons-container">
+        <div class="index-buttons">*@
+        <div class="text-center">
+            @*<a class="btn bg-orange border-dark p-5 m-4" style="font-size: 2rem" asp-controller="Account" asp-action="Login">Login In</a><br>
+            <a class="btn bg-orange border-dark p-5 m-4" style="font-size: 2rem" asp-controller="CreateAccount" asp-action="Create">Sign up</a><br>
+            <a class="btn bg-orange border-dark p-5 m-4" style="font-size: 2rem" asp-controller="Lift" asp-action="Muscle">  Skip  </a><br>*@
+            <a class="btn bg-orange border-dark p-3 m-4" style="font-size: 2rem" asp-controller="Lift" asp-action="Muscle">Continue</a>
+</div>
+    
     <!-- End of Index buttons -->

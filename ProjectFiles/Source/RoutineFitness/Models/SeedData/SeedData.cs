@@ -13,16 +13,16 @@ namespace RoutineFitness.Models
         public static void EnsurePopulated(IApplicationBuilder app)
         {
             RoutineFitnessContext context = app.ApplicationServices.GetRequiredService<RoutineFitnessContext>();
-            context.Database.Migrate();
-            if (!context.Accounts.Any())
-            {
-                context.AddRange(
-                    new Account { UserName = "SwoleBro", Password = "P@ssword", FirstName = "Eddie", LastName = "Baker", Email = "something@some.com" },
-                    new Account { UserName = "PrincessPeach", Password = "Passw0rd", FirstName = "Holly", LastName = "Sterner", Email = "random@random.com" },
-                    new Account { UserName = "TheForce", Password = "Pa$$word", FirstName = "Stan", LastName = "Martin", Email = "email@email.com" }
-                    );
-            }
-                 context.SaveChanges();
+            //context.Database.Migrate();
+            //if (!context.Accounts.Any())
+            //{
+            //    context.AddRange(
+            //        new Account { UserName = "SwoleBro", Password = "P@ssword", FirstName = "Eddie", LastName = "Baker", Email = "something@some.com" },
+            //        new Account { UserName = "PrincessPeach", Password = "Passw0rd", FirstName = "Holly", LastName = "Sterner", Email = "random@random.com" },
+            //        new Account { UserName = "TheForce", Password = "Pa$$word", FirstName = "Stan", LastName = "Martin", Email = "email@email.com" }
+            //        );
+            //}
+            //     context.SaveChanges();
 
             context.Database.Migrate();
             if (!context.Lifts.Any())
